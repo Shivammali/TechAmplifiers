@@ -1,0 +1,14 @@
+/* /* tag selector */
+h3{
+    color:blue;
+}
+
+
+/*Id selector */#SomeId{
+    color:blue;
+}
+
+/* class seletor */
+.someClass{
+    color:red;
+}

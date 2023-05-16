@@ -1,0 +1,44 @@
+<h3>
+  Enter your Details {{ name }}
+  <br />
+  Enter your Details {{ name == "sonal" }}
+  <!-- example of t=string interpolation -->
+</h3>
+
+<label>Enter you name</label>
+<input type="text" placeholder="Enter Your Name" /><br />
+<label class="someClass">Enter you age</label>
+<input type="number" placeholder="Enter Your Age" /><br />
+<label id="SomeId">Enter you Password</label>
+<input type="password" placeholder="Password" /><br />
+<input [type]="inputType" [placeholder]="placename" /><br />
+
+<input type="text" [(ngModel)]="studentName" />
+<span *ngIf="studentName"> my name is{{ studentName }}</span>
+
+<button>Sign In</button>
+<!-- Event binding -->
+<button (click)="onClickEv('Ganesh')">Sign up</button>
+<!-- property binding -->
+<hr />
+<ol>
+  <li *ngFor="let student of students">{{ student }}</li>
+</ol>
+
+<table>
+  <thead>
+    <th>id</th>
+    <th>marks for student</th>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let score of marks; let i = index">
+      <ng-container *ngFor="let student of students">
+        <td>{{ [i] }}</td>
+        <td>{{ score }}</td>
+
+        <td>{{ student }}</td>
+      </ng-container>
+    </tr>
+  </tbody>
+</table>
