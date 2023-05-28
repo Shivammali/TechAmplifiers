@@ -18,7 +18,10 @@ onClickEv(name:string){
   console.log("Hi there"+ name);
   
 }
+enqDetails:any= [];
 
+enqDetail:any={name:"Akshay",course:"Angular",
+date:"22-may-2023",contact:"779854469"};
 students:string[]=["Akshay","manya","rudra","Archit","shivam"]
 marks:number[]=[10,20,50,100,25]
 ids:number[]=[1,2,3,4,5]

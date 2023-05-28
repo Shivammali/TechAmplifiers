@@ -1,0 +1,13 @@
+
+.no-border
+{
+    border:none;
+    padding :0px;
+}
+.green{
+    background-color:rgb(2 211 143);
+    color:white;
+}
+.card-body{
+    font-family: "Lato", Arial, sans-serif;
+}

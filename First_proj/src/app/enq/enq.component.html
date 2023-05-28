@@ -6,7 +6,17 @@
 </h3>
 
 <label>Enter you name</label>
-<input type="text" placeholder="Enter Your Name" /><br />
+<input type="text" [(ngModel)]="enqDetail.name" placeholder="Enter Your Name" /><br />
+
+<label>Enter you contact</label>
+<input type="number" [(ngModel)]="enqDetail.contact" placeholder="Enter Your Name" /><br />
+
+<label>Enter you dae</label>
+<input type="text" [(ngModel)]="enqDetail.date" placeholder="Enter Your Name" /><br />
+
+<label>Enter you course</label>
+<input type="text" [(ngModel)]="enqDetail.course" placeholder="Enter Your Name" /><br />
+
 <label class="someClass">Enter you age</label>
 <input type="number" placeholder="Enter Your Age" /><br />
 <label id="SomeId">Enter you Password</label>
@@ -16,9 +26,9 @@
 <input type="text" [(ngModel)]="studentName" />
 <span *ngIf="studentName"> my name is{{ studentName }}</span>
 
-<button>Sign In</button>
+<button class="btn btn-primary">Sign In</button>
 <!-- Event binding -->
-<button (click)="onClickEv('Ganesh')">Sign up</button>
+<!-- <button  class="btn btn-secondary" (click)="onClickEv()">Sign up</button> -->
 <!-- property binding -->
 <hr />
 <ol>
@@ -29,16 +39,33 @@
   <thead>
     <th>id</th>
     <th>marks for student</th>
+    <th>even </th>
   </thead>
 
   <tbody>
     <tr *ngFor="let score of marks; let i = index">
-      <ng-container *ngFor="let student of students">
+      <!-- <ng-container *ngFor="let student of students"> -->
         <td>{{ [i] }}</td>
         <td>{{ score }}</td>
+        <!-- <td>{{ student }}</td> -->
+      <!-- </ng-container> -->
+    </tr>
+  </tbody>
+</table>
 
-        <td>{{ student }}</td>
-      </ng-container>
+
+<table>
+  <thead>
+    <th>id</th>
+    <th>even marks for student</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let score of marks; let i = index;" >
+      <!-- <ng-container *ngFor="let student of students"> -->
+        <td *ngIf="score % 2==0">{{ [i] }}</td>
+        <td *ngIf="score % 2==0">{{score}}</td>
+        <!-- <td>{{ student }}</td> -->
+      <!-- </ng-container> -->
     </tr>
   </tbody>
 </table>
